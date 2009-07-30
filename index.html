@@ -1,0 +1,51 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Load Button Example</title>
+
+    <!-- ExtJS CSS -->
+    <link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-2.2/resources/css/ext-all.css">
+
+    <!-- ExtJS lib -->
+    <script type="text/javascript" src="http://extjs.cachefly.net/ext-2.2/adapter/ext/ext-base.js"></script>
+    <script type="text/javascript" src="http://extjs.cachefly.net/ext-2.2/ext-all.js"></script>
+
+    <script type="text/javascript" src="Ext.ux.LoadButton.js"></script>
+    <script type="text/javascript">
+    Ext.onReady(function(){
+
+        //loadbutton handler
+        var deleteWorld = function(){
+            win.body.update('Deleting world...');
+            //my async stuff
+            (function(){
+                win.body.update('World deleted, good bye.');
+                this.resetIcon();
+            }).defer(2000, this); //give this (the button) as scope for "this.resetIcon()"
+        };
+
+        
+        var win = new Ext.Window({
+            title : 'Load Button test',
+            width : 400,
+            height: 300,
+            tbar:[
+                {
+                    xtype:'tbloadbutton',
+                    cls: 'x-btn-icon', //not needed in ext3
+                    icon : '../../img/icons/world_delete.png',
+                    loadicon : 'ajax-loader.gif',
+                    handler : deleteWorld
+                }
+            ],
+            html : 'Click the "Delete World" button.'
+                    
+        });
+        win.show();
+
+    });
+    </script>
+</head>
+<body>
+</body>
+</html>
