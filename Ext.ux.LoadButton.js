@@ -18,8 +18,6 @@ Ext.ux.LoadButton = Ext.extend(Ext.Toolbar.Button, {
             }
             this.fireEvent("click", this, e);
             if(this.handler){
-                //this.el.removeClass("x-btn-over");
-
                 this.setLoadIcon();
                 this.handler.call(this.scope || this, this, e);
             }
