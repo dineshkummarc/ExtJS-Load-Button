@@ -1,4 +1,12 @@
 See my blog post (in french) http://fcargoet.evolix.net/2009/07/extjs-bouton-asynchrone/ for more information
 Demo : http://fcargoet.evolix.net/demos/extjs/load-button/
 
+Licenses :
+- Ext.ux.LoadButton extension is under GPLv3
+- Image world_delete.png is under CC-By-3.0
+    - it comes from the Silk Icons pack by Mark James
+    - you can download the pack at http://www.famfamfam.com/lab/icons/silk/
+- ajax-loader.gif comes from http://www.ajaxload.info/ ans is totally free for use
+
+
 More to come here soon
