@@ -25,11 +25,21 @@ Ext.ux.LoadButton = Ext.extend(Ext.Toolbar.Button, {
     },
     setLoadIcon : function()
     {
-        this.el.child('button').setStyle('background-image','url('+this.loadicon+')');
+        if(this.loadicon && this.icon){
+            this.el.child('button').setStyle('background-image','url('+this.loadicon+')');
+        }
+        else if(this.loadiconCls && this.iconCls){
+            this.el.child('button').removeClass(this.iconCls).addClass(this.loadiconCls);
+        }
     },
     resetIcon : function()
     {
-        this.el.child('button').setStyle('background-image','url('+this.icon+')');
+        if(this.loadicon && this.icon){
+            this.el.child('button').setStyle('background-image','url('+this.icon+')');
+        }
+        else if(this.loadiconCls && this.iconCls){
+            this.el.child('button').removeClass(this.loadiconCls).addClass(this.iconCls)
+        }
     }
 });
 

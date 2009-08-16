@@ -5,6 +5,16 @@
 
     <!-- ExtJS CSS -->
     <link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-2.2/resources/css/ext-all.css">
+   
+    <!-- Load Button CSS -->
+    <style type="text/css">
+        .world_delete{
+            background-image:url(world_delete.png) !important;            
+        }
+        .ajax-loader{
+            background-image:url(ajax-loader.gif) !important;
+        }
+    </style>
 
     <!-- ExtJS lib -->
     <script type="text/javascript" src="http://extjs.cachefly.net/ext-2.2/adapter/ext/ext-base.js"></script>
@@ -32,9 +42,18 @@
             tbar:[
                 {
                     xtype:'tbloadbutton',
-                    cls: 'x-btn-icon', //not needed in ext3
+                    cls: 'x-btn-text-icon',
                     icon : 'world_delete.png',
+                    text : 'using icon/loadicon',
                     loadicon : 'ajax-loader.gif',
+                    handler : deleteWorld
+                },
+                {
+                    xtype:'tbloadbutton',
+                    cls: 'x-btn-text-icon',
+                    text: 'using iconCls/loadiconCls',
+                    iconCls : 'world_delete',
+                    loadiconCls : 'ajax-loader',
                     handler : deleteWorld
                 }
             ],
