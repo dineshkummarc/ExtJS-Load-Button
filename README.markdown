@@ -1,7 +1,13 @@
+ExtJS Load Button
+=================
 See my website (in french) for more information : http://fcargoet.evolix.net/webdev/extjs/extjs-load-button/
+
+Demo
+----
 See a demo : http://fcargoet.evolix.net/demos/extjs/load-button/
 
-Licenses :
+Licenses
+--------
 - Ext.ux.LoadButton extension is under GPLv3
 - Image world_delete.png is under CC-By-3.0
     - it comes from the Silk Icons pack by Mark James
